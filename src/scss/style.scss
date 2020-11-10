@@ -1,0 +1,137 @@
+@import 'mixins';
+@import 'vars';
+@import 'fonts';
+@import 'global';
+@import 'svg';
+
+//header
+.header {
+	width: 100%;
+	height: 100vh;
+
+	&__nav {
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		top: -100vh;
+		background-color: #16162d;
+		border-bottom-right-radius: 100%;
+		border-bottom-left-radius: 100%;
+		transition: all .6s cubic-bezier(1, 0, 0, 1);
+	}
+}
+
+.nav {
+	&__list {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__item {
+		margin-right: 30px;
+	}
+
+	&__item:last-child {
+		margin-right: 0;
+	}
+
+	&__link {
+		font-size: 35px;
+		@include m400;
+	}
+
+	&__link:hover,
+	&__link:focus {
+		background: linear-gradient(to top, #ffe838, #fd57bf);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&.open {
+		top: 0;
+		border-radius: initial;
+	}
+}
+
+.burger {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	width: 40px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	z-index: 10;
+	transition: all .5s;
+
+	&.open {
+		transform: rotate(-45deg);
+	}
+
+	&__line {
+		background: linear-gradient(to right, #ffe838, #fd57bf);
+		width: 100%;
+		height: 4px;
+		border-radius: 5px;
+	}
+
+	&__line--start,
+	&__line--end {
+		width: 50%;
+		transition: transform .5s cubic-bezier(.54, -.81, .57, .57);
+	}
+
+	&__line--start {
+		transform-origin: right;
+	}
+
+	.open &__line--start {
+		transform: rotate(-450deg) translateX(7.1px);
+	}
+
+	&__line--end {
+		align-self: flex-end;
+		transform-origin: left;
+	}
+
+	.open &__line--end {
+		transform: rotate(-450deg) translateX(-7.1px);
+	}
+}
+
+//intro
+.intro {
+	min-height: 100vh;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	transform: translateX(-50%, -50%);
+	z-index: -1;
+
+	&__title {
+		@include m400;
+		font-size: 55px;
+		line-height: 65px;
+		margin-bottom: 10px;
+		background: linear-gradient(to top, #ffe838, #fd57bf);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		user-select: none;
+	}
+
+	&__text {
+		font-size: 30px;
+		line-height: 35px;
+	}
+}
+
+
+@import 'media';
