@@ -133,5 +133,79 @@
 	}
 }
 
+//about
+.about {
+	&__inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__img {
+		margin-right: 35px;
+	}
+
+	&__img,
+	&__info{
+		width: 50%;
+	}
+
+
+	&__box {
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 0;
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		font-size: 60px;
+		opacity: .3;
+		letter-spacing: 2px;
+	}
+
+	&__subtitle {
+		font-size: 20px;
+		font-weight: 300;
+	}
+
+	&__text {
+		margin-bottom: 20px;
+		padding: 0 10px;
+	}
+
+	&__social {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.social{
+
+	&__list{
+		display: flex;
+	}
+
+	&__item{
+		margin-right: 10px;
+	}
+
+	&__item:last-child{
+		margin-right: 0;
+	}
+	&__icon{
+		opacity: .5;
+		transition: .5s;
+	}
+
+	&__icon:hover{
+		opacity: 1;
+	}
+
+	&__icon:active{
+		transform: scale(.8);
+	}
+}
+
 
 @import 'media';
