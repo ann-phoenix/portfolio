@@ -227,7 +227,7 @@
 .services {
 
 	&__box {
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 	}
 
 	&__items {
@@ -236,13 +236,13 @@
 	}
 
 	&__item {
-		max-width: 500px;
+		max-width: 580px;
 		width: 100%;
 		text-align: center;
-		padding: 10px;
+		padding: 25px;
 		display: flex;
-    flex-direction: column;
-    align-items: center;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	&__icon {
@@ -265,9 +265,79 @@
 	&__item-title {
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		margin-bottom: 10px;
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+
+	&__item-descr {
+		font-size: 18px;
+		line-height: 25px;
 	}
 }
 
+//portfolio
+.portfolio {
+
+	&__box {
+		margin-bottom: 80px;
+	}
+
+	&__item {
+		display: flex;
+		margin-bottom: 50px;
+		align-items: center;
+	}
+
+	&__item:last-child {
+		margin-bottom: 0;
+	}
+
+	&__img {
+		max-width: 50%;
+	}
+
+	&__descr {
+		max-width: 50%;
+	}
+
+	&__descr-title {
+		text-transform: uppercase;
+		@include r300;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+
+	&__descr-text {
+		font-size: 16px;
+		line-height: 23px;
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		display: inline-block;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, .3);
+		font-size: 14px;
+		@include r300;
+		transition: all .5s;
+	}
+
+	&__link:hover {
+		text-decoration: underline;
+	}
+
+}
+
+.portfolio__item--left {
+	text-align: end;
+}
+
+.portfolio__img--rigth {
+	margin-right: 30px;
+}
+
+.portfolio__img--left {
+	margin-left: 30px;
+}
 
 @import 'media';
