@@ -45,7 +45,7 @@
 
 	&__link:hover,
 	&__link:focus {
-		background: linear-gradient(to top, #ffe838, #fd57bf);
+		background: linear-gradient(to top, $yellow, $pink);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
@@ -74,7 +74,7 @@
 	}
 
 	&__line {
-		background: linear-gradient(to right, #ffe838, #fd57bf);
+		background: linear-gradient(to right, $yellow, $pink);
 		width: 100%;
 		height: 4px;
 		border-radius: 5px;
@@ -121,7 +121,7 @@
 		font-size: 55px;
 		line-height: 65px;
 		margin-bottom: 10px;
-		background: linear-gradient(to top, #ffe838, #fd57bf);
+		background: linear-gradient(to top, $yellow, $pink);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		user-select: none;
@@ -138,7 +138,6 @@
 	&__inner {
 		display: flex;
 		justify-content: center;
-		align-items: center;
 	}
 
 	&__img {
@@ -146,7 +145,7 @@
 	}
 
 	&__img,
-	&__info{
+	&__info {
 		width: 50%;
 	}
 
@@ -155,13 +154,15 @@
 		text-align: center;
 		text-transform: uppercase;
 		line-height: 0;
-		margin-bottom: 50px;
+		margin-bottom: 80px;
 	}
 
 	&__title {
 		font-size: 60px;
 		opacity: .3;
 		letter-spacing: 2px;
+		// position: relative;
+		// z-index: -1;
 	}
 
 	&__subtitle {
@@ -172,7 +173,18 @@
 	&__text {
 		margin-bottom: 20px;
 		padding: 0 10px;
+		font-size: 20px;
+		line-height: 25px;
 	}
+
+	&__text--indent {
+		margin-bottom: 40px;
+	}
+
+	&__text--center {
+		text-align: center;
+	}
+
 
 	&__social {
 		display: flex;
@@ -180,30 +192,80 @@
 	}
 }
 
-.social{
+.social {
 
-	&__list{
+	&__list {
 		display: flex;
+		// position: relative;
+		// z-index: -1;
 	}
 
-	&__item{
+	&__item {
 		margin-right: 10px;
 	}
 
-	&__item:last-child{
+	&__item:last-child {
 		margin-right: 0;
 	}
-	&__icon{
+
+	&__icon {
 		opacity: .5;
 		transition: .5s;
 	}
 
-	&__icon:hover{
+	&__icon:hover {
 		opacity: 1;
 	}
 
-	&__icon:active{
+	&__icon:active {
 		transform: scale(.8);
+	}
+}
+
+//services
+
+.services {
+
+	&__box {
+		margin-bottom: 80px;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__item {
+		max-width: 500px;
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+	}
+
+	&__icon {
+		width: 60px;
+		height: 60px;
+		transform: rotate(45deg);
+		background-color: $pink;
+		border: 3px solid $yellow;
+		margin-bottom: 50px;
+		display: flex;
+	}
+
+	&-icon {
+		font-size: 35px;
+		color: $yellow;
+		margin: auto;
+		transform: rotate(-45deg);
+	}
+
+	&__item-title {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin-bottom: 10px;
 	}
 }
 
