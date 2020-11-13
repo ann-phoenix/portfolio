@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru"> <head>
 	<meta charset="UTF-8">
@@ -23,9 +22,6 @@
 	</div>
 	<nav class="header__nav nav">
 		<ul class="nav__list">
-			<li class="nav__item">
-				<a class="nav__link" href="index.html">Главная</a>
-			</li>
 			<li class="nav__item">
 				<a class="nav__link" href="#about">Обо мне</a>
 			</li>
@@ -55,10 +51,10 @@
 			<section class="about page-section" id="about">
 				<div class="container">
 					<div class="about__inner">
-						<div class="about__img">
+						<div class="about__img" data-aos="fade-right" data-aos-delay="300">
 							<img class="about-img img" src="img/about.jpg" alt="">
 						</div>
-						<div class="about__info">
+						<div class="about__info" data-aos="fade-left" data-aos-delay="600">
 							<div class="about__box">
 								<h2 class="about__title">Немного</h2>
 								<h3 class="about__subtitle">Обо мне</h3>
@@ -108,12 +104,12 @@
 						<h2 class="skills__title title">Навыки</h2>
 						<h3 class="skills__subtitle subtitle">Что я знаю</h3>
 					</div>
-					<p class="skills__text"> Я разрабатываю веб-сайты с помощью применения технологий HTML5, CSS3, Javascript и
+					<p class="skills__text" data-aos="fade-in" data-aos-delay="300"> Я разрабатываю веб-сайты с помощью применения технологий HTML5, CSS3, Javascript и
 						библиотеки Jquery. Чаще всего макеты верстаю из Photoshop и Figma. Умею пользоваться и настраивать сборку на
 						сборищке Gulp, CSS код пишу с помощью препроцессора SCSS, работаю с Git. В верстке стараюсь делать упор на
 						методологию БЭМ и использование flex-box. Так же есть базовые понятия работы препроцессора HTML Pug, grid,
 						CSS-анимации и нативного Javascript, который сейчас я активно изучаю. </p>
-					<div class="skills__progress progress">
+					<div class="skills__progress progress" data-aos="fade-in" data-aos-delay="600">
 						<div class="progress__item">
 							<div class="progress__item-head">
 								<div class="progress__item-name">HTML/CSS</div>
@@ -145,7 +141,6 @@
 				</div>
 			</section>
 			<!--/skills-->
-			<!--/services-->
 			<!--portfolio-->
 			<section class="portfolio page-section" id="portfolio">
 				<div class="container">
@@ -155,49 +150,52 @@
 					</div>
 					<div class="portfolio__items">
 						<div class="portfolio__item">
-							<img class="portfolio__img portfolio__img--rigth" src="img/item-1.jpg" alt="">
-							<div class="portfolio__descr">
+							<a class="portfolio__img-link" href="#" target="_blank">
+								<img class="portfolio__img portfolio__img--right" data-aos="fade-right" data-aos-delay="300" src="img/item-1.jpg" alt="">
+							</a>
+							<div class="portfolio__descr" data-aos="fade-left" data-aos-delay="600">
 								<h3 class="portfolio__descr-title">Pizza Time</h3>
 								<p class="portfolio__descr-text"> Адаптивная верстка лендинга пиццерии по образцам сайтов, выбранных
 									самим заказчиком. Интерактивные детали выполнены на нативном JavaScript и с помощью плагина на
-									JavaScript. Проект состоит из пяти секций и четырех модальных окон. Мобильное меню представлено
-									отдельным модальным окном. Добавлена метка с собственным изображением в яндекс карту. Сделан favicon и
-									фиксированная шапка. В проекте использованы html, scss, javascript, gulp. </p>
+									JavaScript. В проекте использованы html, scss, javascript, gulp. </p>
 								<a class="portfolio__link" href="#" target="_blank">Посмотреть сайт</a>
 							</div>
 						</div>
 						<div class="portfolio__item portfolio__item--left">
-							<div class="portfolio__descr">
+							<div class="portfolio__descr" data-aos="fade-right" data-aos-delay="900">
 								<h3 class="portfolio__descr-title">Center Logistic</h3>
 								<p class="portfolio__descr-text"> Выполнена адаптивная верстка под все экраны. Сайт состоит из четырех
-									страниц: главная и три текстовые страницы. На главной странице представлено восемь секций. Первая
-									секция - слайдер, который дополняет нестандартная форма обратной связи. На всем сайте есть
-									фиксированная шапка. Кроме того, сверстано два модальных окна, добавлена анимация, плавная прокрутка к
-									секциям и favicon. В проекте использованы html, scss, jquery, gulp. </p>
+									страниц: главная и три текстовые страницы. На всем сайте есть фиксированная шапка. Добавлена анимация,
+									плавная прокрутка к секциям и favicon. В проекте использованы html, scss, jquery, gulp. </p>
 								<a class="portfolio__link" href="#" target="_blank">Посмотреть сайт</a>
 							</div>
-							<img class="portfolio__img portfolio__img--left" src="img/item-2.jpg" alt="">
+							<a class="portfolio__img-link" href="#" target="_blank">
+								<img class="portfolio__img portfolio__img--left" data-aos="fade-left" data-aos-delay="1200" src="img/item-2.jpg" alt="">
+							</a>
 						</div>
 						<div class="portfolio__item">
-							<img class="portfolio__img portfolio__img--rigth" src="img/item-3.jpg" alt="">
-							<div class="portfolio__descr">
+							<a class="portfolio__img-link" href="#" target="_blank">
+								<img class="portfolio__img portfolio__img--right" data-aos="fade-right" data-aos-delay="1500" src="img/item-3.jpg" alt="">
+							</a>
+							<div class="portfolio__descr" data-aos="fade-left" data-aos-delay="1700">
 								<h3 class="portfolio__descr-title">Drive Moto</h3>
-								<p class="portfolio__descr-text"> Адаптивная верстка интернет-магазина из Figma. Выполнена верстка
-									главной страницы, страницы каталога, карточки товара. Сверстаны пагинация, фильтры, хлебные крошки,
-									рейтинг товара, слайдеры с ценами, баннеры. В проекте использованы html, scss, jquery, gulp. </p>
+								<p class="portfolio__descr-text"> Адаптивная верстка интернет-магазина: главная страница, страница
+									каталога, карточка товара. Сверстаны пагинация, фильтры, хлебные крошки, рейтинг товара, слайдеры с
+									ценами, баннеры. В проекте использованы html, scss, jquery, gulp. </p>
 								<a class="portfolio__link" href="#" target="_blank">Посмотреть сайт</a>
 							</div>
 						</div>
 						<div class="portfolio__item portfolio__item--left">
-							<div class="portfolio__descr">
+							<div class="portfolio__descr" data-aos="fade-right" data-aos-delay="1900">
 								<h3 class="portfolio__descr-title">Котейка</h3>
 								<p class="portfolio__descr-text"> Верстка сайта гостиницы для кошек. Сайт состоит из главной страницы,
-									каталога и карточки товара. Сделана фиксированная шапка и два модальных окна. Макет был предоставлен
-									только для больших экранов, поэтому адаптив выполнен самостоятельно. В проекте использованы html,
-									scss, jquery, gulp. </p>
+									каталога и карточки товара. Макет был предоставлен только для больших экранов, поэтому адаптив
+									выполнен самостоятельно. В проекте использованы html, scss, jquery, gulp. </p>
 								<a class="portfolio__link" href="#" target="_blank">Посмотреть сайт</a>
 							</div>
-							<img class="portfolio__img portfolio__img--left" src="img/item-4.jpg" alt="">
+							<a class="portfolio__img-link" href="#" target="_blank">
+								<img class="portfolio__img portfolio__img--left" data-aos="fade-left" data-aos-delay="2100" src="img/item-4.jpg" alt="">
+							</a>
 						</div>
 					</div>
 				</div>
@@ -211,7 +209,7 @@
 						<h3 class="services__subtitle subtitle">Что я могу сделать для вас</h3>
 					</div>
 					<div class="services__items">
-						<div class="services__item">
+						<div class="services__item" data-aos="fade-in" data-aos-delay="300">
 							<div class="services__icon">
 								<i class="services-icon icon-code"></i>
 							</div>
@@ -219,7 +217,7 @@
 							<p class="services__item-descr">Валидная, кроссбраузерная, адаптивная верстка сайтов любой сложности,
 								начиная от простых лендингов и заканчивая большими интернет-магазинами</p>
 						</div>
-						<div class="services__item">
+						<div class="services__item" data-aos="fade-in" data-aos-delay="600">
 							<div class="services__icon">
 								<i class="services-icon icon-cogs"></i>
 							</div>
@@ -230,8 +228,9 @@
 					</div>
 				</div>
 			</section>
+			<!--/services-->
 			<!-- STOP WRITE CODE -->
-		</div><footer class="footer">
+		</div><footer class="footer" id="contacts">
 	<div class="container">
 		<div class="footer__inner">
 			<div class="footer__phone"> Тел: <a class="footer__link" href="tel:79313365397"> +7 (931) 336-53-97</a>

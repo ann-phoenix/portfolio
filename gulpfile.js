@@ -95,6 +95,7 @@ gulp.task("style", function () {
 		.src([
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
+			"node_modules/aos/dist/aos.css",
 		])
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
 		.pipe(cssmin()) //минифицируем полученный файл
@@ -113,7 +114,8 @@ gulp.task("script", function () {
 	return gulp
 		.src([
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
-			"node_modules/jquery/dist/jquery.js"
+			"node_modules/jquery/dist/jquery.js",
+			"node_modules/aos/dist/aos.js",
 		])
 		.pipe(size())
 		.pipe(babel())
